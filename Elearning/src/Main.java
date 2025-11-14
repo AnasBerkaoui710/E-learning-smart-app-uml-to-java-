@@ -121,6 +121,27 @@ public class Main {
 
     }
 
+
+    public Student trouverEtudiant(int id) {
+        for (Student e : etudiants){
+            if (e.idStudent == id){
+                return e;
+            }
+        }
+        return null;
+
+    }
+
+    public Cour trouverCour(int id){
+        for (Cour c : cours){
+            if (c.idCour == id){
+                return c;
+            }
+        }
+        return null;
+    }
+
+
     public void inscrireEtudiant(){
         Scanner scanner = new Scanner(System.in);
 
