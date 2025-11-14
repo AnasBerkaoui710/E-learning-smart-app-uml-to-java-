@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 
 import java.util.Scanner;
-import java.util.*;
 
 
 public class Main {
@@ -9,7 +8,7 @@ public class Main {
     public static ArrayList<Student> etudiants = new ArrayList<>();
     public static ArrayList<Instructeur> instructeurs = new ArrayList<>();
     public static ArrayList<Cour> cours = new ArrayList<>();
-    ArrayList<Cour> coursInscrits = new ArrayList<>();
+    public static ArrayList<Cour> coursInscrits = new ArrayList<>();
 
 
     public void main(String[] args){
@@ -45,12 +44,13 @@ public class Main {
             addCour();
             break;
         case 4:
-
+            inscrireEtudiant();
             break;
         case 5:
 
             break;
         case 6:
+            displayCour();
 
             break;
         default:
@@ -152,19 +152,27 @@ public class Main {
         int idcour = scanner.nextInt();
 
 
+
         for(int i=0; i<etudiants.size(); i++){
-            if (id == etudiants.get(i).idStudent) {
-                for (int j=0;j<cours.size();j++){
-                    if (idcour == cours.get(i).idCour){
-                        //coursInscrits.add(new Cour());
-                    }
-                }
+            Student e = trouverEtudiant(id);
+            Cour c = trouverCour(idcour);
+
+            if(e != null && c != null){
+                e.inscrire(c);
             }
+
+
         }
+
+    }
+
+    public void inscrireInstructeur(){
+
 
 
 
     }
+
 
     public void displayCour(){
         Scanner scanner = new Scanner(System.in);
@@ -176,10 +184,6 @@ public class Main {
             displayCour();
         }
     }
-
-
-
-
 
 }
 

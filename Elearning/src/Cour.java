@@ -23,6 +23,7 @@ public class Cour {
     }
 
     public void displayCour(){
+        System.out.println("détails du cour:  ");
         System.out.println("CourseId: "+idCour);
         System.out.println("Course Title: "+Title);
         System.out.println("Course description: "+Description);
