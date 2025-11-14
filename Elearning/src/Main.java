@@ -117,7 +117,7 @@ public class Main {
 
         cours.add(new Cour(id,titre,description));
 
-        System.out.println("Cour ajouté avec succés!!");
+        System.out.print("Cour ajouté avec succés!!");
 
     }
 
