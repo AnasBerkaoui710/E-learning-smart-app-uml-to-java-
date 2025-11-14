@@ -112,7 +112,7 @@ public class Main {
         System.out.print("Entrer le titre du cour :");
         String titre = scanner.nextLine();
 
-        System.out.println("Entrer la description du cour :");
+        System.out.print("Entrer la description du cour :");
         String description = scanner.nextLine();
 
         cours.add(new Cour(id,titre,description));
