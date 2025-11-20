@@ -8,8 +8,9 @@ public class Compte {
      this.numero=numero;
      this.solde=solde;
     }
-    public void verser(double montant){
-        solde += montant;
+    public double verser(double montant){
+        System.out.println("versemment effectué avac suucees!!");
+        return solde += montant;
     }
 
     public void retirer(double montant){
